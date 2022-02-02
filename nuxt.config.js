@@ -49,5 +49,12 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  googleFonts: {
+    display: 'swap',
+    families: {
+      Roboto: [400, 500, 700, 900]
+    }
   }
 }
