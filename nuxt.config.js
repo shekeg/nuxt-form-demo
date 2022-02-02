@@ -33,6 +33,8 @@ export default {
     '@nuxtjs/router',
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    // https://google-fonts.nuxtjs.org/setup
+    '@nuxtjs/google-fonts',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss'
   ],
