@@ -57,7 +57,12 @@
         >
       </div>
     </label>
-    <button type="button" class="mt-6 self-start text-lg font-medium text-blue-400" @click="addPhoneField">
+    <button
+      v-if="hasAllowedPhoneTypes"
+      type="button"
+      class="mt-6 self-start text-lg font-medium text-blue-400"
+      @click="addPhoneField"
+    >
       + Add phone
     </button>
   </div>
@@ -99,6 +104,9 @@ export default {
         }
         return dict
       }, {})
+    },
+    hasAllowedPhoneTypes () {
+      return !!Object.keys(this.allowedPhoneTypesDict).length
     }
   },
   methods: {
