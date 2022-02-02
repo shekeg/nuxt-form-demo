@@ -76,6 +76,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 import UpdateInfoModal from './UpdateInfoModal'
 import { signUpApi } from './services/sign-up-api'
 
@@ -90,17 +92,7 @@ export default {
       errorMessage: null
     }
   },
-  computed: {
-    form () {
-      return {
-        firstName: this.$store.state.form.firstName,
-        lastName: this.$store.state.form.lastName,
-        email: this.$store.state.form.email,
-        phones: this.$store.state.form.phones,
-        membershipType: this.$store.state.form.membershipType
-      }
-    }
-  },
+  computed: mapState({ form: 'form' }),
   methods: {
     handleUpdateForm (payload) {
       this.$store.dispatch('updateForm', payload)
