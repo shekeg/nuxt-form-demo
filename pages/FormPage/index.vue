@@ -34,7 +34,8 @@ export default {
   },
   computed: {
     currentStep () {
-      return this.$options.$STEPS[this.$route.name].number || 0
+      const targetStep = this.$options.$STEPS[this.$route.name]
+      return targetStep ? targetStep.number : 0
     }
   }
 }
