@@ -1,0 +1,64 @@
+.form-step {
+  @apply p-9 w-full bg-white shadow-md rounded;
+  max-width: 490px;
+}
+
+.form-step__title {
+  @apply text-blue-400 font-bold text-4xl;
+}
+
+.input {
+  @apply px-1 py-2 border-2 border-gray-300 rounded;
+}
+
+.radio {
+  @apply relative pl-14;
+}
+
+.radio__input {
+  @apply absolute appearance-none;
+}
+
+.radio__box {
+  @apply
+    -ml-14
+    absolute top-1/2 transform -translate-y-1/2
+    border-2 border-gray-300 rounded
+    bg-white
+  ;
+  width: 45px;
+  height: 45px;
+}
+
+.radio__input:focus-visible ~ .radio__box {
+  @apply outline-black;
+}
+
+.radio__input:checked ~ .radio__box {
+  @apply bg-blue-400;
+}
+
+.radio__input:checked ~ .radio__box::after {
+  @apply
+    absolute left-1/2 top-1/2
+    transform -translate-x-1/2 -translate-y-1/2
+    bg-cover bg-center
+  ;
+  content: '';
+  background-image: url('~/assets/images/icons/radio-checked.svg');
+  width: 24px;
+  height: 30px;
+}
+
+.button {
+  @apply
+    px-2 py-3
+    text-center text-blue-400 text-2xl font-bold
+    border-2 border-blue-400
+    bg-white rounded-lg
+  ;
+}
+
+.button.--accent {
+  @apply text-white bg-blue-400;
+}
