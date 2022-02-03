@@ -12,6 +12,15 @@
   @apply px-1 py-2 border-2 border-gray-300 rounded-lg;
 }
 
+.select {
+  @apply appearance-none pl-4 pr-5 capitalize border-2 border-gray-300;
+  background-color: #EEEEEE;
+  background-image: url("~/assets/images/icons/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 50%;
+}
+
 .radio {
   @apply relative pl-14;
 }
