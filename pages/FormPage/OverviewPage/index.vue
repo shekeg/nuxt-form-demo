@@ -55,7 +55,7 @@
       >
         Back
       </button>
-      <button class="mt-5 button --accent" @click="handleSubmit">
+      <button class="mt-5 button --accent" data-test-id="submit-button" @click="handleSubmit">
         Submit
       </button>
       <p v-if="errorMessage" class="mt-6 p-2 bg-red-100 border border-red-400 text-red-500 rounded">
