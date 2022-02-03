@@ -4,7 +4,8 @@
 }
 
 .form-step__title {
-  @apply text-blue-400 font-bold text-4xl;
+  @apply text-blue-400 font-bold;
+  font-size: 2.125rem;
 }
 
 .input {
