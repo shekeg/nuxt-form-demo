@@ -36,7 +36,16 @@
     <label class="mt-5 flex flex-col">
       <span class="text-lg">Phone</span>
       <div v-for="(phone, index) in phones" :key="`${phone.type}-${index}`" class="mt-1 flex">
-        <select class="px-2 capitalize rounded-l" required @change="updatePhoneType(index, $event.target.value)">
+        <select
+          class="
+            px-3 z-10
+            bg-gray-200
+            border-2 border-gray-300
+            capitalize rounded-l
+          "
+          required
+          @change="updatePhoneType(index, $event.target.value)"
+        >
           <option
             v-for="(phoneType) in $options.PHONE_TYPES"
             :key="phoneType"
@@ -50,7 +59,10 @@
         <input
           type="tel"
           class="w-full input"
-          style="border-radius: 0; border-top-right-radius: 4px; border-bottom-right-radius: 4px;"
+          style="
+            border-left: 0;
+            border-radius: 0; border-top-right-radius: 4px; border-bottom-right-radius: 4px;
+          "
           name="phone"
           :value="phone.value"
           @input="updatePhoneValue(index, $event.target.value)"
