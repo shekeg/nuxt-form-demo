@@ -9,7 +9,7 @@
 }
 
 .input {
-  @apply px-1 py-2 border-2 border-gray-300 rounded;
+  @apply px-1 py-2 border-2 border-gray-300 rounded-lg;
 }
 
 .radio {
@@ -24,7 +24,7 @@
   @apply
     -ml-14
     absolute top-1/2 transform -translate-y-1/2
-    border-2 border-gray-300 rounded
+    border-2 border-gray-300 rounded-lg
     bg-white
   ;
   width: 45px;

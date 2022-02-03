@@ -40,8 +40,8 @@
           class="
             px-3 z-10
             bg-gray-200
-            border-2 border-gray-300
-            capitalize rounded-l
+            border-l-2 border-t-2 border-b-2 border-gray-300
+            capitalize rounded-l-lg
           "
           required
           @change="updatePhoneType(index, $event.target.value)"
@@ -58,10 +58,10 @@
         </select>
         <input
           type="tel"
-          class="w-full input"
-          style="
-            border-left: 0;
-            border-radius: 0; border-top-right-radius: 4px; border-bottom-right-radius: 4px;
+          class="
+            px-1 py-2 w-full
+            border-t-2 border-r-2 border-b-2 border-gray-300
+            rounded-r-lg
           "
           name="phone"
           :value="phone.value"
