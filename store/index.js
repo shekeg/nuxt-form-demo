@@ -29,12 +29,20 @@ export const actions = {
   nuxtServerInit ({ commit }, { app }) {
     const userFormCookie = app.$cookies.get('user-form')
     if (userFormCookie) {
+      const {
+        firstName = DEFAULTS.firstName,
+        lastName = DEFAULTS.lastName,
+        email = DEFAULTS.email,
+        phones = DEFAULTS.phones,
+        membershipType = DEFAULTS.membershipTyp
+      } = userFormCookie
+
       commit('updateForm', {
-        firstName: userFormCookie.firstName || DEFAULTS.firstName,
-        lastName: userFormCookie.lastName || DEFAULTS.lastName,
-        email: userFormCookie.email || DEFAULTS.email,
-        phones: userFormCookie.phones || DEFAULTS.phones,
-        membershipType: userFormCookie.membershipType || DEFAULTS.membershipType
+        firstName,
+        lastName,
+        email,
+        phones,
+        membershipType
       })
     } else {
       commit('updateForm', DEFAULTS)

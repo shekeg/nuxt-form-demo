@@ -64,11 +64,6 @@
     </div>
     <UpdateInfoModal
       v-if="isUpdateInfoModalVisible"
-      :first-name="form.firstName"
-      :last-name="form.lastName"
-      :email="form.email"
-      :phones="form.phones"
-      :membership-type="form.membershipType"
       @on-update-form="handleUpdateForm"
       @on-close-modal="isUpdateInfoModalVisible = false"
     />

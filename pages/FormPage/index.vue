@@ -3,8 +3,8 @@
     <div v-if="currentStep !== 0" class="relative mb-10 w-full flex justify-between" style="max-width: 556px">
       <div v-for="step in $options.$STEPS" :key="step.number" class="flex flex-col items-center">
         <span
-          class="py-3 rounded-full text-2xl border leading-none"
-          style="font-weight: 900; padding-left: 18px; padding-right: 18px"
+          class="py-3 rounded-full font-black border-2 leading-none"
+          style="font-size: 1.75rem; padding-left: 18px; padding-right: 18px"
           :class="{
             'text-white bg-gray-300 border-gray-300': currentStep !== step.number && currentStep < step.number,
             'text-blue-400 bg-gray-200 border-blue-400': currentStep === step.number,

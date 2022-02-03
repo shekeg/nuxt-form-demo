@@ -27,13 +27,13 @@
       <span class="text-lg">Premium</span>
     </label>
     <p v-if="isRegularChecked" class="mt-7">
-      <span class="font-bold">Regular</span>
+      <span class="text-lg font-bold">Regular</span>
       Lorem ipsum dolor sit amet consectetur adipisicing elit.
       Pariatur quaerat aut eius harum reiciendis quisquam voluptate illo fugit neque.
       Ducimus repellendus perspiciatis repellat eius velit tenetur incidunt vero sequi in.
     </p>
     <p v-if="isPremiumChecked" class="mt-7">
-      <span class="font-bold">Premium</span>
+      <span class="text-lg font-bold">Premium</span>
       Lorem ipsum dolor sit amet consectetur adipisicing elit.
       Pariatur quaerat aut eius harum reiciendis quisquam voluptate illo fugit neque.
       Ducimus repellendus perspiciatis repellat eius velit tenetur incidunt vero sequi in.
