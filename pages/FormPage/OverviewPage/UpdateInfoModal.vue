@@ -1,45 +1,49 @@
 <template>
-  <div class="fixed inset-0 lg:flex lg:items-center lg:justify-center overflow-auto">
-    <div class="fixed inset-0 bg-gray-900 opacity-20" @click="$emit('on-close-modal')" />
-    <form class="p-9 w-full relative z-10 lg:w-1/2 bg-white rounded" @submit.prevent="handleSubmit">
-      <div class="lg:flex">
-        <div class="p-3 flex-1">
-          <h2 class="text-blue-400 font-bold text-2xl">
-            Personal Info
-          </h2>
-          <ContactInfoFields
-            class="mt-4"
-            :first-name="form.firstName"
-            :last-name="form.lastName"
-            :email="form.email"
-            :phones="form.phones"
-            @on-update-field="(field, value) => form[field] = value"
-          />
+  <div
+    class="fixed inset-0 h-full w-full flex justify-center items-center bg-black bg-opacity-20 overflow-auto"
+    @click.self="$emit('on-close-modal')"
+  >
+    <div class="max-h-full w-full lg:w-1/2">
+      <form class="p-9 bg-white rounded" @submit.prevent="handleSubmit">
+        <div class="lg:flex">
+          <div class="p-3 flex-1">
+            <h2 class="text-blue-400 font-bold text-2xl">
+              Personal Info
+            </h2>
+            <ContactInfoFields
+              class="mt-4"
+              :first-name="form.firstName"
+              :last-name="form.lastName"
+              :email="form.email"
+              :phones="form.phones"
+              @on-update-field="(field, value) => form[field] = value"
+            />
+          </div>
+          <div class="p-3 flex-1 lg:border-l">
+            <h2 class="text-blue-400 font-bold text-2xl">
+              Membership
+            </h2>
+            <MembershipFields
+              class="mt-7"
+              :membership-type="form.membershipType"
+              @on-update-field="(field, value) => form[field] = value"
+            />
+          </div>
         </div>
-        <div class="p-3 flex-1 lg:border-l">
-          <h2 class="text-blue-400 font-bold text-2xl">
-            Membership
-          </h2>
-          <MembershipFields
-            class="mt-7"
-            :membership-type="form.membershipType"
-            @on-update-field="(field, value) => form[field] = value"
-          />
+        <div class="mt-6 flex flex-col">
+          <button
+            class="button"
+            type="button"
+            @click="$emit('on-close-modal')"
+          >
+            Cancel
+          </button>
+          <button class="mt-5 button --accent">
+            Save
+          </button>
         </div>
-      </div>
-      <div class="mt-6 flex flex-col">
-        <button
-          class="button"
-          type="button"
-          @click="$emit('on-close-modal')"
-        >
-          Cancel
-        </button>
-        <button class="mt-5 button --accent">
-          Save
-        </button>
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
 </template>
 
