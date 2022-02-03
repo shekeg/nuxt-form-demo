@@ -1,5 +1,5 @@
 .form-step {
-  @apply p-9 w-full bg-white shadow-md rounded;
+  @apply p-9 w-full bg-white shadow-xl rounded-xl;
   max-width: 490px;
 }
 
