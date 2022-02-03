@@ -60,6 +60,7 @@
     <button
       v-if="hasAllowedPhoneTypes"
       type="button"
+      data-test-id="add-phone-button"
       class="mt-6 self-start text-lg font-medium text-blue-400"
       @click="addPhoneField"
     >
