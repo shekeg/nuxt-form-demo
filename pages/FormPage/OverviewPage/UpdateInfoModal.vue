@@ -57,38 +57,16 @@ export default {
     ContactInfoFields,
     MembershipFields
   },
-  props: {
-    firstName: {
-      type: String,
-      required: true
-    },
-    lastName: {
-      type: String,
-      required: true
-    },
-    email: {
-      type: String,
-      required: true
-    },
-    phones: {
-      type: Array,
-      required: true
-    },
-    membershipType: {
-      type: String,
-      required: true
-    }
-  },
   data () {
+    const formStateJson = JSON.stringify(this.$store.state.form)
+    const formStateCopy = JSON.parse(formStateJson)
+
     return {
       form: {
-        firstName: this.firstName,
-        lastName: this.lastName,
-        email: this.email,
-        phones: this.phones.length
-          ? this.phones
-          : [{ type: 'home', value: '' }],
-        membershipType: this.membershipType
+        ...formStateCopy,
+        phones: formStateCopy.phones.length
+          ? formStateCopy.phones
+          : [{ type: 'home', value: '' }]
       }
     }
   },
