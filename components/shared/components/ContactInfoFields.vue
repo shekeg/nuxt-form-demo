@@ -37,12 +37,7 @@
       <span class="text-lg">Phone</span>
       <div v-for="(phone, index) in phones" :key="`${phone.type}-${index}`" class="mt-1 flex">
         <select
-          class="
-            px-3 z-10
-            bg-gray-200
-            border-l-2 border-t-2 border-b-2 border-gray-300
-            capitalize rounded-l-lg
-          "
+          class="select z-10 rounded-l-lg"
           required
           @change="updatePhoneType(index, $event.target.value)"
         >
